@@ -13,15 +13,24 @@ namespace CapitalLettersCounter
         {
             if(IsPostBack)
             {
+                // Döljer här submitknappen och visar istället en resetknapp.
                 countSubmit.Visible = false;
+                resetForm.Visible = true;
             }
         }
 
         protected void countSubmit_Click(object sender, EventArgs e)
         {
-            userTextInput.Enabled = false;
-            
-            countResult.Text = Models.TextAnalyzer.GetNumberOfCapitals(userTextInput.Text).ToString();           
+            // Avaktiverar textboxen, sedan anropar jag min metod för att beräkna antalet versaler.
+            userTextInput.Enabled = false;            
+            countResult.Text = String.Format("Texten innehåller {0} versaler.", Models.TextAnalyzer.GetNumberOfCapitals(userTextInput.Text).ToString());           
+        }
+
+        protected void resetForm_Click(object sender, EventArgs e)
+        {
+            // Återställer här postbackstatusen till inget, vilket gör att sidan presenteras i sitt originalutförande igen.
+            Session["ViewState"] = null;
+            Response.Redirect("~/Default.aspx");
         }
     }
 }

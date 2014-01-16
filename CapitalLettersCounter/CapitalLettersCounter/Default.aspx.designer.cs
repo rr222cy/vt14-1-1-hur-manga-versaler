@@ -31,6 +31,15 @@ namespace CapitalLettersCounter {
         protected global::System.Web.UI.WebControls.TextBox userTextInput;
         
         /// <summary>
+        /// countResult control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label countResult;
+        
+        /// <summary>
         /// countSubmit control.
         /// </summary>
         /// <remarks>
@@ -40,12 +49,12 @@ namespace CapitalLettersCounter {
         protected global::System.Web.UI.WebControls.Button countSubmit;
         
         /// <summary>
-        /// countResult control.
+        /// resetForm control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label countResult;
+        protected global::System.Web.UI.WebControls.Button resetForm;
     }
 }

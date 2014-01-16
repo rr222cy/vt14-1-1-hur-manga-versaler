@@ -15,10 +15,10 @@
         <main>
             <p>Beräkna antalet versaler i en text nedan:</p>
             <section><asp:TextBox ID="userTextInput" runat="server" CssClass="capitalLettersTextarea" TextMode="MultiLine"></asp:TextBox></section>
+            <p><asp:Label ID="countResult" runat="server" CssClass="standardButton"></asp:Label></p>
 
-
-            <p><asp:Button ID="countSubmit" runat="server" Text="Beräkna nu" OnClick="countSubmit_Click"></asp:Button></p>
-            <p><asp:Label ID="countResult" runat="server" Text=""></asp:Label></p>
+            <p><asp:Button ID="countSubmit" runat="server" Text="Beräkna nu" OnClick="countSubmit_Click" CssClass="standardButton"></asp:Button></p>
+            <p><asp:Button ID="resetForm" runat="server" Text="Rensa" OnClick="resetForm_Click" Visible="False" CssClass="standardButton"></asp:Button></p>           
         </main>
             
     </div>
