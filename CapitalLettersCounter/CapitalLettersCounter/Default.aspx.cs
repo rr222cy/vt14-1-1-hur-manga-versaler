@@ -11,12 +11,17 @@ namespace CapitalLettersCounter
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if(IsPostBack)
+            {
+                countSubmit.Visible = false;
+            }
         }
 
-        protected void Button1_Click1(object sender, EventArgs e)
+        protected void countSubmit_Click(object sender, EventArgs e)
         {
-            throw new ArgumentException();
+            userTextInput.Enabled = false;
+            
+            countResult.Text = Models.TextAnalyzer.GetNumberOfCapitals(userTextInput.Text).ToString();           
         }
     }
 }
