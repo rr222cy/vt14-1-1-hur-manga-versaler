@@ -15,6 +15,8 @@
         <main>
             <p>Beräkna antalet versaler i en text nedan:</p>
             <section><asp:TextBox ID="TextBox1" runat="server" CssClass="capitalLettersTextarea" TextMode="MultiLine"></asp:TextBox></section>
+
+
             <p><asp:Button ID="Button1" runat="server" Text="Beräkna nu" OnClick="Button1_Click1"></asp:Button></p>
             <p><asp:Label ID="Label1" runat="server" Text=""></asp:Label></p>
         </main>
